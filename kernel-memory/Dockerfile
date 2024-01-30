@@ -6,7 +6,7 @@ RUN git clone https://github.com/slorello89/kernel-memory
 WORKDIR /app/kernel-memory
 RUN git checkout add-service
 
-COPY appsettings.json /app/kernel-memory/service/Service
+COPY appsettings.Template.json /app/kernel-memory/service/Service/appsettings.json
 COPY entrypoint.sh /app/kernel-memory/service/Service
 
 WORKDIR /app/kernel-memory/service/Service
