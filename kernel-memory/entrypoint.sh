@@ -5,7 +5,7 @@ if [ -z "${OpenAIApiKey}" ]; then
     exit 1
 fi
 
-FILE="appsettings.json"
+FILE=appsettings.json
 
-sed -i "s/\"APIKey\":\"[^\"]*\"/\"APIKey\":\"${OpenAIApiKey}\"/" $FILE
+sed -i "s/\"APIKey\": \"APIKey\"/\"APIKey\": \"$OpenAIApiKey\"/g" "$FILE"
 dotnet run
