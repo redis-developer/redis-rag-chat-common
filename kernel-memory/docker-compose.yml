@@ -7,6 +7,8 @@ services:
       - "6379:6379"
     container_name: redis-km
   kernel-memory:
+    environment:
+      - OpenAIApiKey=${OpenAIApiKey}
     build:
       context: .
     links:
